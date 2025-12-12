@@ -7,14 +7,29 @@
  */
 public class Baking extends Recipe
 {
-    public Baking()
+    private int ovenTemps;
+    private boolean containsEgg;
+    public Baking(String title, int timeMinutes, double[] ingredientAmounts, String ingredientUnits[], String[] ingredientNames,
+                  int ovenTemps, boolean containsEgg)
     {
-        super(
-            "Chocolate Mug Cake",
-            new double[] {2.0, 1.0, 1.5, 1.0, 1.0, 1.0, 1.0, 1.0, 0.25},
-            new String[] {"Tbsp", "Tbsp", "Tbsp", "Pinch", "Pinch", "Egg", "Tbsp", "Tbsp", "Tsp"},
-            new String[] {"All-purpose flour", "Cocoa powder", "Sugar", "Baking powder", "Salt",
-                          "Yolk", "Milk", "Melted butter", "Vanilla extract"}
-        );
+        super(title, timeMinutes, ingredientAmounts, ingredientUnits, ingredientNames);
+        this.ovenTemps = ovenTemps;
+        this.containsEgg = containsEgg;
+    }
+    public boolean containsEgg()
+    {
+        return containsEgg;
+    }
+    public String getType()
+    {
+        return "Baking";
+    }
+    public void printRecipeForPeople(int people)
+    {
+        super.printRecipeForPeople(people);
+        if(ovenTemps > 0)
+        {
+            System.out.println("Recommended Oven Temperature: " + ovenTemps + " degrees in Celcius \n");
+        }
     }
 }

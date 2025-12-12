@@ -7,13 +7,38 @@
  */
 public class Frying extends Recipe
 {
-    public Frying()
+    private boolean isDeep;
+    private String oilType;
+    public Frying(String title, int timeMinutes,
+                  double[] ingredientAmounts,
+                  String[] ingredientUnits,
+                  String[] ingredientNames,
+                  boolean isDeep,
+                  String oilType)
     {
-        super(
-            "Placeholder Fry Recipe",
-            new double[] {1.0},
-            new String[] {"Cup"},
-            new String[] {"Oil"}
-        );
+        super(title, timeMinutes, ingredientAmounts, ingredientUnits, ingredientNames);
+        this.isDeep = isDeep;
+        this.oilType = oilType;
+    }
+    public boolean isDeep()
+    {
+        return isDeep;
+    }
+    public String getType()
+    {
+        return "Frying";
+    }
+    public void printRecipeForPeople(int people)
+    {
+        super.printRecipeForPeople(people);
+
+        System.out.println("Method: " + (isDeep ? "Deep Fry" : "Pan Fry"));
+
+        if (oilType != null && !oilType.equals(""))
+        {
+            System.out.println("Oil: " + oilType);
+        }
+
+        System.out.println();
     }
 }
