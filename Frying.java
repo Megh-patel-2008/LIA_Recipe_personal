@@ -7,15 +7,13 @@
  */
 public class Frying extends Recipe
 {
-    private String oilType;
-    private int fryTime;
-    private boolean panDeepFry;
-    public Frying(String recipeName, String cookTime, double[] ingredientAmounts, String[] ingredientNames,
-                  String oilType, int fryTime, boolean panDeepFry)
+    public Frying()
     {
-        super(recipeName, cookTime, ingredientAmounts, ingredientNames);
-        this.oilType = oilType;
-        this.fryTime = fryTime;
-        this.panDeepFry = panDeepFry;
+        super(
+            "Placeholder Fry Recipe",
+            new double[] {1.0},
+            new String[] {"Cup"},
+            new String[] {"Oil"}
+        );
     }
 }
