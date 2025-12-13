@@ -19,7 +19,7 @@ public class Recipe
         this.timeMinutes = timeMinutes;
         this.ingredientAmounts = ingredientAmounts;
         this.ingredientUnits = ingredientUnits;
-        this.ingredientNames = ingredientNames = ingredientNames;
+        this.ingredientNames = ingredientNames;
     }
     public double getScaleAmount(int index, int people)
     {

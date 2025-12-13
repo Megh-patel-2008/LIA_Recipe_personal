@@ -27,9 +27,12 @@ public class Baking extends Recipe
     public void printRecipeForPeople(int people)
     {
         super.printRecipeForPeople(people);
-        if(ovenTemps > 0)
+        System.out.println("Recommended Oven Temperature: " + ovenTemps + " degrees in Celcius \n");
+        if(containsEgg)
         {
-            System.out.println("Recommended Oven Temperature: " + ovenTemps + " degrees in Celcius \n");
+            System.out.println("Category: Contains Eggs");
+        }else{
+            System.out.println("Category: Eggless");
         }
     }
 }

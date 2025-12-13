@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class RecipeBook here.
  *
@@ -6,4 +6,9 @@
  * @version (a version number or a date)
  */
 public class RecipeBook
-{}
+{
+    public RecipeBook()
+    {
+        
+    }
+}
