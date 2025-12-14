@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class Baking here.
  *
@@ -40,5 +40,16 @@ public class Frying extends Recipe
         }
 
         System.out.println();
+    }
+    public static ArrayList<Frying> getFryingRecipe()
+    {
+        ArrayList<Frying> list = new ArrayList<>();
+        list.add(new Frying(
+            "Deep Fried Potatoes",15,
+            new double[]{2,1},
+            new String[]{"Unit","Tbsp"},
+            new String[]{"Potatoes","Oil"},
+            true,"Vegetable Oil"));
+            return list;
     }
 }
