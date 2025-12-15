@@ -47,7 +47,7 @@ public class Frying extends Recipe
         list.add(new Frying(
             "Deep Fried Potatoes",15,
             new double[]{2,1},
-            new String[]{"Unit","Tbsp"},
+            new String[]{"","Tbsp"},
             new String[]{"Potatoes","Oil"},
             true,"Vegetable Oil"));
             return list;

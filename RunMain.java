@@ -64,7 +64,6 @@ public class RunMain
                 System.out.println("\nFry:");
                 System.out.println("A. Deep Fry");
                 System.out.println("B. Pan Fry");
-                System.out.print("> ");
                 String fryChoice = sc.nextLine();
                 boolean deep;
                 if (fryChoice.equalsIgnoreCase("A"))
