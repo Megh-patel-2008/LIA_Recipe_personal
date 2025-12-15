@@ -38,7 +38,7 @@ public class Baking extends Recipe
     public static ArrayList<Baking> getBakingRecipe()
     {
         ArrayList<Baking> list = new ArrayList<>();
-        list.add(new Baking("Chocolate Mug Cake", 10,
+        list.add(new Baking("Chocolate Cake", 10,
         new double[]{2,1,1.5,1,1,1,1,1,0.25},
         new String[]{"Tbsp","Tbsp","Tbsp","Pinch","Pinch","Egg","Tbsp","Tbsp","Tsp"},
         new String[]{"All-purpose flour", "Cocoa Powder", "Sugar", "Baking Powder", "Salt", "Yolk", "Milk", "Melted-buter", "Vanilla-Extract"},

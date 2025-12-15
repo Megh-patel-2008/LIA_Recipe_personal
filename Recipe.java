@@ -40,8 +40,8 @@ public class Recipe
     public void printRecipeForPeople(int people)
     {
         System.out.println("\n " + title);
-        System.out.println("Ingredients for " + people + " people: \n");
-        
+        System.out.println("Time: " + getScaledTime(people) + "minutes");
+        System.out.println("Ingredients for " + people + " people: \n");        
         for(int i = 0; i < ingredientAmounts.length; i++)
         {
             double scaled = getScaleAmount(i, people);
@@ -51,11 +51,14 @@ public class Recipe
             }else{
                 System.out.println(scaled + " " +ingredientUnits[i] + "  " +ingredientNames[i]);
             }
-            System.out.println("\n Time to cook:" + timeMinutes + " minutes");
         }
     }
     public String getType()
     {
         return "Recipe";
+    }
+    public int getScaledTime(int people)
+    {
+        return timeMinutes * people;
     }
 }
